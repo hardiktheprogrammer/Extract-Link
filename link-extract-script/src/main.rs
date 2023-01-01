@@ -13,7 +13,7 @@ error_chain! {
 }
 #[tokio::main]
 async fn main() -> Result<()> {
-    let res = reqwest::get("https://www.rust-lang.org/en-US/")
+    let res = reqwest::get("https://javascript.info/")
         .await?
         .text()
         .await?;
@@ -21,7 +21,7 @@ async fn main() -> Result<()> {
     Document::from(res.as_str()) //
         .find(Name("a")) // a tags
         .filter_map(|n| n.attr("href")) //href is link
-        .for_each(|x| println!("{}", x)); //print the href link
+        .for_each(|b| println!("{}", b)); //print the href link
 
     Ok(())
 }
