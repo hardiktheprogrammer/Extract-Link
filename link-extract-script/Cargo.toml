@@ -8,5 +8,5 @@ edition = "2021"
 [dependencies]
 error-chain="0.12.4"
 reqwest="0.11.12"
-select="0.5.0"
-tokio={version="1.21.2",feature=["full"]} //aync  reqwest
+select="0.6.0"
+tokio={version="1.23.0",feature=["full"]} 
